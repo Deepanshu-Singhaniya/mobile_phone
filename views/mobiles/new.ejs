@@ -1,0 +1,45 @@
+<%- include("../partials/header") %> 
+
+<h1 style="text-align: center; margin-top: 20px;">ADD NEW MOBILE PHONE </h1>
+<div style="width: 30%; margin: 25px auto;">
+    
+    <form action="/mobiles" method="POST">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Name</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="name">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Image URL</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" name="image">
+        </div>
+        <div class="form-group">
+          <label for="description1">RAM</label>
+          <input type="text" class="form-control" id="description1" name="ram">
+        </div>
+        <div class="form-group">
+            <label for="description2">Display</label>
+            <input type="text" class="form-control" id="description2" name="display">
+        </div>
+        <div class="form-group">
+            <label for="description3">Camera</label>
+            <input type="text" class="form-control" id="description3" name="camera">
+        </div>
+        <div class="form-group">
+            <label for="description4">Battery</label>
+            <input type="text" class="form-control" id="description4" name="battery">
+        </div>
+        <div class="form-group">
+            <label for="description5">Processor</label>
+            <input type="text" class="form-control" id="description5" name="processor">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
+
+<!-- <form action="/mobiles" method="POST">
+    <input type="text" name="name" placeholder="Name">
+    <input type="text" name="image" placeholder="Image url">
+    <button>Submit</button>
+</form> -->
+
+<%- include("../partials/footer") %> 

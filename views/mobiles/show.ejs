@@ -1,0 +1,59 @@
+<%- include("../partials/header") %> 
+
+<div class="container">
+    <div class="thumbnail" id="showbox">
+        <div><img class="img-responsive" src="<%= mobile.image %>" alt="" style="padding-left: 40%; padding-top: 20px;"> </div>
+        <br>
+        <div class="captions-full">
+            <h3><a href="#"><p><%= mobile.name %> </p></a></h3>
+            <h4>Price: &#8377;14,999 </h4>
+        </div>
+        <div class="container" style="padding-bottom: 10px;">
+            A mobile phone, cellular phone, cell phone, cellphone, handphone, or hand phone, sometimes shortened to simply mobile,
+            cell or just phone, is a portable telephone that can make and receive calls over a radio frequency link while the user is
+            moving within a telephone service area. The radio frequency link establishes a connection to the switching systems of a mobile
+            phone operator, which provides access to the public switched telephone network (PSTN). Modern mobile telephone services use
+            a cellular network architecture and, therefore, mobile telephones are called cellular telephones or cell phones in North America.
+            In addition to telephony, digital mobile phones (2G) support a variety of other services, such as text messaging, MMS, email, 
+            Internet access, short-range wireless communications (infrared, Bluetooth), business applications, video games and digital 
+            photography. Mobile phones offering only those capabilities are known as feature phones; mobile phones which offer greatly advanced
+            computing capabilities are referred to as smartphones.
+        </div>
+    </div>
+    <hr>
+    
+    <div class="jumbotron">   
+        <p id="pstyle">Specifications</p>
+        <ul style="list-style-type: none;">
+            <li>RAM:       <%= mobile.ram %> </li>
+            <li>Display:   <%= mobile.display %> </li>
+            <li>Camera:    <%= mobile.camera %> </li>
+            <li>Battery:   <%= mobile.battery %> </li>
+            <li>Processor: <%= mobile.processor %> </li>
+        </ul>
+        
+        <hr>
+
+        <div class="text-right">
+            <a class="btn btn-success" href="/mobiles/<%= mobile._id %>/comments/new ">Add New Comment</a>
+        </div>
+        <p></p>
+        <%  mobile.comments.forEach(function (comment){ %>
+            <div class="row">
+                <div class="col-md-12">
+                    <strong><%= comment.author %></strong>
+                    <span class="pull-right spa1">10 days ago</span>
+                </div>
+                <div class="col-md-12">
+                    <%= comment.text %> 
+                    <p></p>
+                </div>
+            </div>   
+        <% }); %>
+    </div>
+
+
+    
+</div>
+
+<%- include("../partials/footer") %> 
